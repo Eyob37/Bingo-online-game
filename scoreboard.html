@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scoreboard - Multiplayer Bingo</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>🏆 Game Results</h1>
+    </header>
+    
+    <main class="scoreboard-section">
+      <div class="winner-announcement">
+        <div class="trophy">🏆</div>
+        <h2 id="winner-name">Winner Name</h2>
+        <p class="winner-message">Congratulations! You got BINGO!</p>
+      </div>
+      
+      <div class="final-standings">
+        <h3>Final Standings</h3>
+        <div id="standings-list" class="standings-list">
+          <!-- Standings will be populated by JavaScript -->
+        </div>
+      </div>
+      
+      <div class="game-stats">
+        <h3>Game Statistics</h3>
+        <div class="stats-grid" id="game-stats">
+          <!-- Stats will be populated by JavaScript -->
+        </div>
+      </div>
+      
+      <div class="action-buttons">
+        <button id="play-again" class="btn primary large">Play Again</button>
+        <a href="index.html" class="btn secondary large">Main Menu</a>
+      </div>
+    </main>
+  </div>
+  
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/scoreboard.js"></script>
+</body>
+</html>

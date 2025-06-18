@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Bingo Game</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="hero-section">
+      <h1 class="game-title">🎯 BINGO MULTIPLAYER</h1>
+      <p class="game-subtitle">Play Bingo with friends online in real-time!</p>
+    </header>
+    
+    <main class="menu-section">
+      <div class="menu-card">
+        <h2>Choose Your Game Mode</h2>
+        
+        <div class="menu-options">
+          <a href="create-room.html" class="menu-btn primary">
+            <span class="btn-icon">🏠</span>
+            <div class="btn-content">
+              <h3>Create Room</h3>
+              <p>Host a game with your friends</p>
+            </div>
+          </a>
+          
+          <a href="join-room.html" class="menu-btn secondary">
+            <span class="btn-icon">🚪</span>
+            <div class="btn-content">
+              <h3>Join Room</h3>
+              <p>Enter a room ID to join</p>
+            </div>
+          </a>
+          
+          <a href="random-match.html" class="menu-btn accent">
+            <span class="btn-icon">🎲</span>
+            <div class="btn-content">
+              <h3>Random Match</h3>
+              <p>Play with random online players</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="game-rules">
+        <h3>How to Play</h3>
+        <ul>
+          <li>Each player gets a 5×5 board with numbers 1-25</li>
+          <li>Players take turns selecting cells</li>
+          <li>All players mark the same number on their boards</li>
+          <li>Complete rows, columns, or diagonals to earn B-I-N-G-O letters</li>
+          <li>First player to spell "BINGO" wins!</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+  
+  <script src="js/firebase-config.js"></script>
+</body>
+</html>

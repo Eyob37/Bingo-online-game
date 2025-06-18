@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Match - Multiplayer Bingo</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <a href="index.html" class="back-btn">← Back</a>
+      <h1>Random Match</h1>
+    </header>
+    
+    <main class="form-section">
+      <div class="form-card">
+        <form id="random-match-form">
+          <div class="form-group">
+            <label for="player-name">Your Name</label>
+            <input type="text" id="player-name" required maxlength="20" placeholder="Enter your name">
+          </div>
+          
+          <button type="submit" class="btn primary large">Find Random Player</button>
+        </form>
+      </div>
+      
+      <div id="searching" class="search-status hidden">
+        <div class="search-animation">
+          <div class="search-icon">🎯</div>
+          <h2>Searching for Players...</h2>
+          <p>We're finding you an opponent!</p>
+          <div class="loading-spinner"></div>
+        </div>
+        <button id="cancel-search" class="btn secondary">Cancel Search</button>
+      </div>
+      
+      <div id="match-found" class="match-info hidden">
+        <div class="match-animation">
+          <div class="match-icon">🎉</div>
+          <h2>Match Found!</h2>
+          <p>Starting game in <span id="countdown">3</span> seconds...</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/room-manager.js"></script>
+  <script type="module" src="js/random-match.js"></script>
+</body>
+</html>
